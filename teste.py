@@ -1,8 +1,9 @@
 import os
+import asyncio
 
 import discord
 
-TOKEN = 'Njk0MjU5MDA5MDYxOTEyNjQ3.XoJBoA.AAl7ZHPAspaR-XD7HyxZRiuILjo'
+TOKEN = 'Njk0NTU5NTk0ODA1OTg1NDAz.XoNZdw.RRNdVUEX2bUdzcUpDuHBIVBDEZA'
 GUILD = '631950256065609739'
 client = discord.Client()
 
@@ -27,7 +28,7 @@ async def on_ready():
 async def on_message(message):
 	if message.content == 'f':
 		await message.channel.send(file=discord.File('my_image.png'))
-	if message.content == 'yey':
+	if message.content == 'yay':
 		user = message.author
 		vc = await user.voice.channel.connect()
 		vc.play(discord.FFmpegPCMAudio('yay.mp3'), after=lambda e: print('done', e))
