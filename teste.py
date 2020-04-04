@@ -59,10 +59,6 @@ async def on_message(message):
 
         if message.content == 'f':
             await message.channel.send('RESPECT')
-
-        if message.content.lower().replace(' ','') == 'yay':
-            await message.channel.send('-play https://www.youtube.com/watch?v=attUrDwfdr8')
-            time.sleep(10)
-            await message.channel.send('-leave')
+)
 
 client.run(TOKEN)
