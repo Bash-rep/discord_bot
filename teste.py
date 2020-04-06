@@ -3,7 +3,7 @@ import asyncio
 
 import discord
 
-TOKEN = 'Njk0NTU5NTk0ODA1OTg1NDAz.XoNfww.uLr9Kko-jT9KQNBnD9ACIhAlHDU'
+TOKEN = 'Njk0NTU5NTk0ODA1OTg1NDAz.XojZkw.zOOhRnWIZ0AFqUJJvr0g342wuyw'
 GUILD = '631950256065609739'
 client = discord.Client()
 
@@ -39,5 +39,26 @@ async def on_message(message):
 			await asyncio.sleep(1)
 		vc.stop()
 		await vc.disconnect()
+
+
+@client.event
+async def on_message(message):
+    if message.author == client.user:
+        return
+
+    for guild in client.guilds:
+        if guild.name == DISCORD_GUILD:
+            break
+
+    members = []
+    members.append([member.name for member in guild.members])
+    if 'beep-boop-bot' in str(message.channel):
+        if message.content.lower().replace(' ','') == 'quememalandro?':
+            response = members[0][random.randint(0,len(members[0])-1)]
+            await message.channel.send('@'+response)
+
+        if message.content == 'f':
+            await message.channel.send('RESPECT')
+)
 
 client.run(TOKEN)
