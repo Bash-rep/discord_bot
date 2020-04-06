@@ -3,7 +3,7 @@ import asyncio
 import random
 import discord
 
-TOKEN = 'Njk0NTU5NTk0ODA1OTg1NDAz.XouLxg.TEZF4nns4DHQ1-9oH1iC-uFswVc'
+TOKEN = 'ttt'
 GUILD = '631950256065609739'
 client = discord.Client()
 
